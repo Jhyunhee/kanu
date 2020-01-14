@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="kanu.css">
+    <link rel="stylesheet" href="jquery.bxslider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery.bxslider.js"></script>
+    <script>
+    $("document").ready(function(){
+        var $top = $(".product .product-top .tabs li"),
+            $americano = $(".americano"),
+            $latte = $(".latte"),
+            $decaffeination = $(".decaffeination"),
+            $signature = $(".signature");
+            
+            $americano.eq(0).show();
+     
+       var content = [$americano, $latte, $decaffeination, $signature];
+     
+        $top.click(function(){
+        var h = $(this).index();
+            $americano.hide();
+            $latte.hide();
+            $decaffeination.hide();
+            $signature.hide();
+            content[h].show();
+            $top.removeClass("active").eq(h).addClass("active")
+            
+        })
+        
+        $(".event .event-wrap").bxSlider({
+        captions: true,
+        auto: true,
+        autoDelay: 2000,
+        autoControls: true,
+        pager: true,
+        stopAutoOnClick: true,
+        slideWidth: 1000
+    })
+        
+    })
+    </script>
+    
+</head>
+<body>
+    <header>
+       <div class="mobilenav">
+    <input type="checkbox" id="menu-btn">
+    <label for="menu-btn">
+        <span class="btn-line"></span>
+        <span class="btn-line"></span>
+        <span class="btn-line"></span>
+    </label>
+    <div class="side-nav">
+        <input type="checkbox" id="sub1-chk">
+        <ul>
+            <li><a href="#">ABOUT KANU</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">EVENT</a></li>
+            <li><a href="#">NEWS/MEDIA</a></li>
+            <li><a href="#">CUSTOMER</a></li>
+        </ul>
+    </div>
+    </div>
+        <div class="logo">
+        <img src="img/logo_1.png" alt="로고">
+        </div>
+        <div class="login">
+            <img src="icon/login.png" alt="로그인">
+        </div>
+    </header>
+    <div class="video">
+    <video src="kanu.mp4" controls muted loop></video>
+    </div>
+    <div class="bottom">
+       <div class="bottomimg">
+        <img src="icon/call.png" alt="전화">
+        <img src="icon/share.png" alt="공유">
+        <img src="icon/map.png" alt="지도">
+        <img src="icon/car.png" alt="배송">
+        <img src="icon/get.png" alt="장바구니">
+        </div>
+    </div>
+    
+    <div class="product">
+     <h3>PRODUCT</h3>
+      <div class="producticon"><img src="icon/coffeecup.png" alt="커피"></div>
+        <div class="product-top">
+            <ul class="tabs">
+                <li class="active">아메리카노</li>
+                <li>라떼</li>
+                <li>디카페인</li>
+                <li>시그니처</li>
+            </ul>
+        </div>  </div>
+        <div class="americano">
+            <div class="americano-content">
+                <img src="img/ma.png" alt="마일드로스트">
+                <p>마일드로스트_아메리카노</p>
+            </div>
+            <div class="americano-content">
+                <img src="img/mas.png" alt="스위트마일드로스트">
+                <p>마일드로스트_스위트아메리카노</p>
+            </div>
+            <div class="americano-content">
+                <img src="img/da.png" alt="다크로스트">
+                <p>다크로스트_아메리카노</p>
+            </div>
+            <div class="americano-content">
+                <img src="img/das.png" alt="스위트다크로스트">
+                <p>다크로스트_스위트아메리카노</p>
+            </div>
+        </div>
+        <div class="latte">
+            <div class="latte-content">
+                <img src="img/l.png" alt="라떼">
+                <p>라떼</p>
+            </div>
+            <div class="latte-content">
+                <img src="img/ddl.png" alt="더블샷라떼">
+                <p>더블샷라떼</p>
+            </div>
+            <div class="latte-content">
+                <img src="img/bl.png" alt="바닐라라떼">
+                <p>바닐라라떼</p>
+            </div>
+            <div class="latte-content">
+                <img src="img/tl.png" alt="티라미수라떼">
+                <p>티라미수라떼</p>
+            </div>
+        </div>
+        <div class="decaffeination">
+            <div class="decaffeination-content">
+                <img src="img/dda.png" alt="디카페인아메리카노">
+                <p>디카페인아메리카노</p>
+            </div>
+            <div class="decaffeination-content">
+                <img src="img/dl.png" alt="디카페인라떼">
+                <p>디카페인라떼</p>
+            </div>
+        </div>
+        <div class="signature">
+            <div class="signature-content">
+                <img src="img/sm.png" alt="시그니처미디엄로스트">
+                <p>시그니처_미디엄로스트</p>
+            </div>
+            <div class="signature-content">
+                <img src="img/s.png" alt="시그니처다크로스트">
+                <p>시그니처_다크로스트</p>
+            </div>
+        </div>
+    
+    
+    <div class="event">
+      <div class="event-wrap">
+       <div class="event-content">
+        <img src="img/event_1.png" alt="이벤트1">
+        </div>
+         <div class="event-content">
+        <img src="img/event_2.jpg" alt="이벤트2">
+        </div>
+         <div class="event-content">
+        <img src="img/event_3.jpg" alt="이벤트3">
+        </div>
+        </div>
+    </div>
+    <div class="store">
+        <h3>맥심플랜트</h3>
+        <p>맥심 플랜트는 좋은 커피를 향한 오랜 철학과 전문성을<br>
+'커피나무(Coffee Plant)', '공장(Production Plant)'<br>그리고 '문화를 심는 공간(Culture Plant)'<br>세 가지 주제로 구현한 맥심 브랜드 플래그쉽 스토어입니다.</p>
+  <div class="storeimg"><img src="img/plant.jpg" alt="맥심플랜트"></div>
+   <h4>플래그쉽 스토어</h4>
+   <div class="storeicon">
+   <img src="icon/store.png" alt="스토어">
+   </div>
+   <ul>
+       <li>주소 : 서울 용산구 이태원로 250</li>
+       <li>전화 : 070-4287-8557</li>
+       <li>영업 : 매일 10:00 ~ 22:00</li>
+   </ul>
+    </div>
+    <div class="sns">
+        <h3>세상에서 가장 작은 카페 #카누</h3>
+        <div class="snsimg">
+            <img src="icon/facebook.png" alt="페이스북">
+            <img src="icon/instagram.png" alt="인스타그램">
+            <img src="icon/youtube.png" alt="유투브">
+        </div>
+    </div>
+    <div class="news">
+        <div class="newsicon"><img src="icon/radio.png" alt="뉴스레터"></div>
+        <h3>카누 뉴스레터 신청</h3>
+        <p>매달 가장 먼저 카누커피의 새로운 소식을 받아보세요!</p>
+        <div class="newstxt">
+    <input type="NAME" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="E-mail"></div>
+        <h4>카누 개인정보 동의(약관보기)</h4>
+        <input type="radio" id="chebox">
+        <p>신청</p>        
+    </div>
+    <div class="footer">
+    <div class="footertxt">
+    <h3>1588-2233</h3>
+    <ul>
+        <li>개인정보처리방침</li>
+        <li>이용약관</li>
+        <li>이메일무단수집거부</li>
+    </ul>
+    <p>서울 마포구 독막로 324 동서빌딩</p>
+    <p>서COPYRIGHT ⓒ 2010 DONGSUH CO.LTD.ALL RIGHTS RESERVED</p>
+    </div>
+    </div>
+</body>
+</html>
